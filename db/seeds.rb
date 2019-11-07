@@ -21,3 +21,28 @@ User.create!(name:  "Example User",
                password:              password,
                password_confirmation: password)
 end
+
+
+
+Match.create!(restriction_level: 18,
+              date: DateTime.new(2019, 11, 14, 16, 15, 0, 0.375),
+              place: "ラウンドワン河原町店")
+
+49.times do |n|
+  Match.create!(restriction_level: 13.2,
+                date: DateTime.new(2019, 11, 15, 16, 15 + n, 0, 0.375),
+                place: "ゲームパニック京都")
+end
+
+
+
+MusicGame.create!(name: "beatmania IIDX")
+MusicGame.create!(name: "pop'n music")
+MusicGame.create!(name: "Dance Dance Revolution")
+MusicGame.create!(name: "jubeat")
+MusicGame.create!(name: "SOUND VOLTEX")
+MusicGame.create!(name: "ノスタルジア")
+MusicGame.create!(name: "maimai")
+MusicGame.create!(name: "CHUNITHM")
+MusicGame.create!(name: "オンゲキ")
+MusicGame.create!(name: "太鼓の達人")

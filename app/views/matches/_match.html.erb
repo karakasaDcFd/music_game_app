@@ -1,0 +1,8 @@
+<li>
+  <%= link_to "試合" + match.id.to_s, match %>
+  <% if current_user.admin? %>
+    | <%= link_to "編集", edit_match_path(match) %>
+    | <%= link_to "削除", match, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  <% end %>
+</li>

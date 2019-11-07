@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  restriction_level: 1.5
+  date: 2019-11-07 10:58:56
+  place: MyString
+
+two:
+  restriction_level: 1.5
+  date: 2019-11-07 10:58:56
+  place: MyString

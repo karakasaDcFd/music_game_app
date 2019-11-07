@@ -1,0 +1,14 @@
+<%= form_for(@match, url: yield(:path)) do |f| %>
+  <%= render 'shared/error_messages_of_match', object: @match %>
+
+  <%= f.label '選曲制限' %>
+  <%= f.text_field :restriction_level, class: 'form-control' %>
+
+  <%= f.label '日時' %>
+  <%= f.datetime_select :date, class: 'form-control' %>
+
+  <%= f.label '場所' %>
+  <%= f.text_field :place, class: 'form-control' %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

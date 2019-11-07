@@ -1,0 +1,2 @@
+class MusicGame < ApplicationRecord
+end
