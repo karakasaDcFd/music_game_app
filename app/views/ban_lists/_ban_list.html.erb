@@ -1,0 +1,9 @@
+<li id="ban_list-<%= ban_list.id %>">
+  <span class="content">
+    <%= ban_list.title %>
+    <% if current_user.admin? %>
+    | <%= link_to "削除", ban_list, method: :delete,
+                                    data: { confirm: "You sure?" } %>
+  <% end %>
+  </span>
+</li>

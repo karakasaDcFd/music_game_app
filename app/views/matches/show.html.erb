@@ -8,4 +8,22 @@
       </h1>
     </section>
   </aside>
+  <div class="col-md-8">
+    <% if @match.set_lists.any? %>
+      <h3>課題曲 (<%= @match.set_lists.count %>)</h3>
+      <ul class="set_lists">
+        <%= render @set_lists %>
+      </ul>
+    <% end %>
+    <%= link_to "課題曲を追加する", "/matches/#{@match.id}/new_set_list" %>
+  </div>
+  <div class="col-md-8">
+    <% if @match.ban_lists.any? %>
+      <h3>禁止曲 (<%= @match.ban_lists.count %>)</h3>
+      <ul class="ban_lists">
+        <%= render @ban_lists %>
+      </ul>
+    <% end %>
+    <%= link_to "禁止曲を追加する", "/matches/#{@match.id}/new_ban_list" %>
+  </div>
 </div>

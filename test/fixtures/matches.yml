@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  restriction_level: 1.5
-  date: 2019-11-07 10:58:56
-  place: MyString
+  restriction_level: 18
+  date: 2019-11-07 10:55:00
+  place: "ラウンドワン京都河原町店"
 
 two:
-  restriction_level: 1.5
-  date: 2019-11-07 10:58:56
-  place: MyString
+  restriction_level: 13.2
+  date: 2019-11-08 16:40:00
+  place: "ゲームパニック京都"

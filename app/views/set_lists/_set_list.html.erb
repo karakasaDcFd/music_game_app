@@ -1,0 +1,9 @@
+<li id="set_list-<%= set_list.id %>">
+  <span class="content">
+    <%= set_list.title %>
+    <% if current_user.admin? %>
+    | <%= link_to "削除", set_list, method: :delete,
+                                    data: { confirm: "You sure?" } %>
+  <% end %>
+  </span>
+</li>

@@ -1,5 +1,5 @@
 <%= form_for(@match, url: yield(:path)) do |f| %>
-  <%= render 'shared/error_messages_of_match', object: @match %>
+  <%= render 'shared/error_messages', object: f.object %>
 
   <%= f.label '選曲制限' %>
   <%= f.text_field :restriction_level, class: 'form-control' %>

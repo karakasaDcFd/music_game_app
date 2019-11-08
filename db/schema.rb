@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191107054922) do
+ActiveRecord::Schema.define(version: 20191107135709) do
+
+  create_table "ban_lists", force: :cascade do |t|
+    t.string "title"
+    t.integer "match_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["match_id"], name: "index_ban_lists_on_match_id"
+  end
 
   create_table "matches", force: :cascade do |t|
     t.float "restriction_level"

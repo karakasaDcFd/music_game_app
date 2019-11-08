@@ -30,7 +30,7 @@ Match.create!(restriction_level: 18,
 
 49.times do |n|
   Match.create!(restriction_level: 13.2,
-                date: DateTime.new(2019, 11, 15, 16, 15 + n, 0, 0.375),
+                date: DateTime.new(2019, 11, 15, 16, n, 0, 0.375),
                 place: "ゲームパニック京都")
 end
 
@@ -46,3 +46,19 @@ MusicGame.create!(name: "maimai")
 MusicGame.create!(name: "CHUNITHM")
 MusicGame.create!(name: "オンゲキ")
 MusicGame.create!(name: "太鼓の達人")
+
+
+
+matches = Match.order(:created_at).take(6)
+3.times do
+  title = Faker::Lorem.sentence(5)
+  matches.each { |match| match.set_lists.create!(title: title) }
+end
+
+
+
+matches = Match.order(:created_at).take(6)
+3.times do
+  title = Faker::Lorem.sentence(5)
+  matches.each { |match| match.ban_lists.create!(title: title) }
+end

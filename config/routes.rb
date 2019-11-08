@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   resources :users
 
   resources :matches
+  resources :set_lists, only: [:create, :destroy]
+  get '/matches/:mid/new_set_list', to: 'set_lists#new'
+  resources :ban_lists, only: [:create, :destroy]
+  get '/matches/:mid/new_ban_list', to: 'ban_lists#new'
 end

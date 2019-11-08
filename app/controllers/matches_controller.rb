@@ -1,8 +1,11 @@
 class MatchesController < ApplicationController
+  before_action :logged_in_user, only: [:edit, :update, :index, :destroy]
   before_action :admin_user, only: [:new, :create, :edit, :update, :destroy]
 
   def show
     @match = Match.find(params[:id])
+    @set_lists = @match.set_lists
+    @ban_lists = @match.ban_lists
   end
 
   def new
@@ -50,7 +53,7 @@ class MatchesController < ApplicationController
     end
 
     # 管理者かどうか確認
-    def admin_user
-      redirect_to(root_url) unless current_user.admin?
-    end
+    # def admin_user
+      # redirect_to(root_url) unless current_user.admin?
+    # end
 end
